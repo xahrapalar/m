@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "Nutrition_Calculations")
 public class nutrition_calculations {
     @PrimaryKey(autoGenerate = true)
-    private int Id;
+    private int id;
     private int userId;
-    private int Your_Calorie_Intake;
+    private int yourCalorieIntake;
     private int minProtein;
     private int maxProtein;
     private int minCarbs;
@@ -16,13 +16,12 @@ public class nutrition_calculations {
     private int minFat;
     private int maxFat;
 
-
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public int getUserId() {
@@ -33,13 +32,15 @@ public class nutrition_calculations {
         this.userId = userId;
     }
 
-    public int getYour_Calorie_Intake() {
-        return Your_Calorie_Intake;
+    public int getYourCalorieIntake() {
+        return yourCalorieIntake;
     }
 
-    public void setYour_Calorie_Intake(int your_Calorie_Intake) {
-        Your_Calorie_Intake = your_Calorie_Intake;
+    public void setYourCalorieIntake(int yourCalorieIntake) {
+        this.yourCalorieIntake = yourCalorieIntake;
     }
+
+
 
     public int getMinProtein() {
         return minProtein;
@@ -73,7 +74,7 @@ public class nutrition_calculations {
         this.maxCarbs = maxCarbs;
     }
 
-    public float getMinFat() {
+    public int getMinFat() {
         return minFat;
     }
 
@@ -81,11 +82,27 @@ public class nutrition_calculations {
         this.minFat = minFat;
     }
 
-    public float getMaxFat() {
+    public int getMaxFat() {
         return maxFat;
     }
 
     public void setMaxFat(int maxFat) {
+        this.maxFat = maxFat;
+    }
+
+    // Convenience methods
+    public void setProtein(int minProtein, int maxProtein) {
+        this.minProtein = minProtein;
+        this.maxProtein = maxProtein;
+    }
+
+    public void setCarbs(int minCarbs, int maxCarbs) {
+        this.minCarbs = minCarbs;
+        this.maxCarbs = maxCarbs;
+    }
+
+    public void setFat(int minFat, int maxFat) {
+        this.minFat = minFat;
         this.maxFat = maxFat;
     }
 }
