@@ -15,5 +15,6 @@ public interface nutrition_calculations_Dao {
     @Query("SELECT * FROM nutrition_calculations WHERE userId = :userId")
     nutrition_calculations getNutritionForUser(int userId);
 
+    @Query("SELECT * FROM nutrition_calculations WHERE userId = :userId")
     LiveData<nutrition_calculations> getNutritionByUserId(int userId);
 }

@@ -5,7 +5,7 @@ import android.app.Application;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.example.m.dao.dietary_preferences_Dao;
+import com.example.m.dao.DietaryPreferencesDao;
 import com.example.m.dao.nutrition_calculations_Dao;
 import com.example.m.dao.userDao;
 import com.example.m.model.DietaryPreferences;
@@ -27,6 +27,6 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     public abstract userDao userDao();
-    public abstract dietary_preferences_Dao dietary_preferences_Dao();
+    public abstract DietaryPreferencesDao dietary_preferences_Dao();
     public abstract nutrition_calculations_Dao nutrition_calculations_Dao();
 }

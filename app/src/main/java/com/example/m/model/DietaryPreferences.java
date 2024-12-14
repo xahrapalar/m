@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "dietary_preferences")
+@Entity(tableName = "DietaryPreferences")
 public class DietaryPreferences {
 
     @PrimaryKey(autoGenerate = true)

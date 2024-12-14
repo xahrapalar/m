@@ -2,6 +2,7 @@ package com.example.m.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Delete;
 
 import com.example.m.model.user;
 
@@ -18,5 +19,6 @@ public interface userDao {
     @Query("SELECT * FROM user")
     List<user> getAllUsers();
 
+    @Delete
     void delete(user user);
 }
