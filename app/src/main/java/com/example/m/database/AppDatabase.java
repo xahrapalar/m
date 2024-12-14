@@ -8,13 +8,13 @@ import androidx.room.RoomDatabase;
 import com.example.m.dao.dietary_preferences_Dao;
 import com.example.m.dao.nutrition_calculations_Dao;
 import com.example.m.dao.userDao;
-import com.example.m.model.dietary_preferences;
+import com.example.m.model.DietaryPreferences;
 import com.example.m.model.nutrition_calculations;
 import com.example.m.model.user;
 
 import java.util.concurrent.Executor;
 
-@Database(entities = {user.class, dietary_preferences.class, nutrition_calculations.class}, version = 1)
+@Database(entities = {user.class, DietaryPreferences.class, nutrition_calculations.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public static Executor databaseWriteExecutor;
 
