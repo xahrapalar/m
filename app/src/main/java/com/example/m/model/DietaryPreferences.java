@@ -2,6 +2,7 @@ package com.example.m.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "dietary_preferences")
@@ -15,15 +16,19 @@ public class DietaryPreferences {
     @NonNull
     private String dietaryPreference;
 
+    // Default constructor (used by Room)
     public DietaryPreferences() {
     }
 
+    // Constructor with all fields (ignored by Room)
+    @Ignore
     public DietaryPreferences(int id, int userId, @NonNull String dietaryPreference) {
         this.id = id;
         this.userId = userId;
         this.dietaryPreference = dietaryPreference;
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
